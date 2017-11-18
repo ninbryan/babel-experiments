@@ -1,0 +1,14 @@
+{
+  "name": "pipeline-operator",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.0.0-beta.32",
+    "@babel/plugin-proposal-pipeline-operator": "7.0.0-beta.32"
+  },
+  "scripts": {
+    "babel-compile": "node babel-compile.js",
+    "babel-test": "node build/index.js"
+  }
+}
