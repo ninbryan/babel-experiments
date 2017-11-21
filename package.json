@@ -8,7 +8,9 @@
     "@babel/plugin-proposal-pipeline-operator": "7.0.0-beta.32"
   },
   "scripts": {
-    "babel-compile": "node babel-compile.js",
-    "babel-test": "node build/index.js"
+    "babel-compile": "node babel-compile.js main",
+    "babel-compile:extreme": "node babel-compile.js extreme",
+    "babel-test": "node build/main.babel.js",
+    "babel-test:extreme": "node build/extreme.babel.js"
   }
 }

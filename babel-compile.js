@@ -4,8 +4,10 @@ const path = require('path');
 
 console.log('compiling...');
 
+const filename = process.argv[2];
+
 babel.transformFile(
-    path.join('src', 'babel.js'),
+    path.join('src', filename + '.js'),
     {
       "plugins": ["@babel/plugin-proposal-pipeline-operator"]
     },
@@ -16,7 +18,7 @@ babel.transformFile(
         // if (err) throw err;
         
         fs.writeFile(
-          path.join('build', 'babel.js'),
+          path.join('build',  filename + '.babel.js'),
           result.code,
           'utf8',
           (err) => { if (err) throw err; else console.log('done!'); }
